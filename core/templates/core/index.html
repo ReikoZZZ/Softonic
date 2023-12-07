@@ -1,0 +1,98 @@
+{% extends 'core/base.html' %}
+{% block contenido %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/index.css' %}">
+<!-- Sección de Cabecera -->
+<header class="text-white text-center" style="background-image: url('static/core/img/fondo3.jpg');">
+    <div class="container">
+      <h1 class="display-4">¡TeLLevoApp te lleva a donde necesites!</h1>
+      <p class="lead">La mejor manera de llegar a tu destino</p>
+      <a href="#download" class="btn btn-light btn-lg">Descargar Ahora</a>
+    </div>
+</header>
+  
+  <!-- Sección de Características -->
+  <section id="features" class="py-5">
+    <div class="container text-center">
+      <h2 class="pb-4">Características</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{% static 'core/img/1.png' %}" class="img-fluid mb-3" alt="Imagen Característica 1">
+          <h3>Facilidad de Uso</h3>
+          <p>Interfaz simple y amigable para usuarios de todas las edades.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'core/img/2.png' %}" class="img-fluid mb-3" alt="Imagen Característica 2">
+          <h3>Perfil unico</h3>
+          <p>Personaliza la apariencia de tu perfil, vuelvete unico y diferente.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'core/img/3.png' %}" class="img-fluid mb-3" alt="Imagen Característica 3">
+          <h3>Apariencia</h3>
+          <p>Personajes unicos e identificables, un gran aspecto para todo tipo de usuario.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección de Descarga -->
+  <section id="download" class="bg-light py-5" style="background-image: url('static/core/img/fondo.jpg');">
+    <div class="container text-center">
+      <h2 class="pb-4 text-white">Descarga TeLLevoApp</h2>
+      <p class="lead pb-4 text-white">¡Obtén la aplicación ahora y comienza tu viaje!</p>
+      <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#confirmDownloadModal">Descargar Ahora</a>
+    </div>
+  </section>
+  
+  <!-- Sección de Contacto -->
+  <section id="contact" class="py-5">
+    <div class="container text-center">
+      <div class="container">
+        <h2 class="pb-4 text-center">Contacto</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <p class="lead">¿Tienes preguntas o comentarios? ¡Contáctanos!</p>
+      <p>Email: info@tellevoapp.com</p>
+      <p>Teléfono: 123-456-7890</p>
+    </div>
+  </section>
+
+<!--MODAL-->
+  <div class="modal fade" id="confirmDownloadModal" tabindex="-1" aria-labelledby="confirmDownloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmDownloadModalLabel">Confirmación de Descarga</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¿Estás seguro de que deseas descargar la aplicación?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <!-- Puedes agregar aquí el enlace de descarga si el usuario confirma -->
+          <a href="https://download948.mediafire.com/3w78pdk920kgxO8TIn36u_A8MPKBwQDi9nLwa3CA1HhoZ0rrn2qv4wX1swjgSF_bQJmJ3Mx4B8-lu1yzZtYKE_PBRY6D8MuCyAjnIRFqLX8OXXSFXwKjOyRYEbyCokm-4Z6HMRyeMjj_V43nAhrwfOhP4bRDccwmElegTFJzLKU2vg/eas7dd5iqxr6kpu/TeLLevo.apk" class="btn btn-primary">Descargar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--MODAL-->
+{% endblock %}

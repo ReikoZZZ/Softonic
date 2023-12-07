@@ -1,0 +1,19 @@
+header {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: #fff; /* Color del texto sobre la imagen */
+    text-align: center;
+}
+
+.btn {
+    background: #343a40;
+    color: white;
+}
+
+.btn:hover {
+    background: rgb(44, 44, 44);
+    color: white;
+}
+
+
